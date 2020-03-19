@@ -1,0 +1,33 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.container {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.coolNav {
+  margin: 20px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-around;
+}
+
+.Contact {
+  text-align: center;
+}
+
+.Cool {
+  text-align: center;
+}
+
+.Uncool {
+  text-align: center;
+}
