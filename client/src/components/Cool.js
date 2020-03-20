@@ -2,10 +2,10 @@ import React from "react"
 import { useActions } from "../hooks"
 
 export default props => {
-  const { cool } = useActions()
+  const { coolArray } = useActions()
   return (
     <div className="coolView">
-      {cool.map(contact => (
+      {coolArray.map(contact => (
         <div className="coolPeeps">
           <img src={contact.image} />
           <p>{contact.name}</p>

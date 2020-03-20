@@ -4,7 +4,7 @@ import "../styles/App.css"
 import { Link } from "react-router-dom"
 
 export default props => {
-  const { contact, cool, uncool } = useActions()
+  const { contact, moveCool, moveUncool } = useActions()
   return (
     <div>
       <div className="coolNav">
@@ -25,8 +25,8 @@ export default props => {
         <p>{contact.email}</p>
       </div>
       <div className="coolButtons">
-        <button onClick={e => cool(contact)}>Cool</button>
-        <button onClick={e => uncool(contact)}>Uncool</button>
+        <button onClick={e => moveCool(contact)}>Cool</button>
+        <button onClick={e => moveUncool(contact)}>Uncool</button>
       </div>
     </div>
   )

@@ -30,7 +30,7 @@ export default (state = initialState, action) => {
 
 function getContact() {
   return dispatch => {
-    axios.get("/api/contact").then(resp => {
+    axios.get("/api/newcontact").then(resp => {
       dispatch({
         type: GET_CONTACT,
         payload: resp.data
@@ -41,7 +41,7 @@ function getContact() {
 
 function Cool(contact) {
   return dispatch => {
-    axios.post("/api/cool", { contact }).then(resp => {
+    axios.post("/api/cool", contact).then(resp => {
       dispatch(getContact())
     })
   }
@@ -49,7 +49,7 @@ function Cool(contact) {
 
 function Uncool(contact) {
   return dispatch => {
-    axios.post("/api/uncool", { contact }).then(resp => {
+    axios.post("/api/uncool", contact).then(resp => {
       dispatch(getContact())
     })
   }
